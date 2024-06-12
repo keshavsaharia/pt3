@@ -1,0 +1,22 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"baseUrl": ".",
+        "experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"allowSyntheticDefaultImports": true,
+		"declaration": false,
+		"removeComments": true,
+		"outFile": "./public/js/game.js",
+        "lib": ["es5", "es2015.promise", "dom", "es2015"],
+		"module": "AMD",
+		"target": "es5",
+		"moduleResolution": "node"
+	},
+	"include": [
+		"./src/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

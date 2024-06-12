@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Probabilistic Tic Tac Toe</title>
+        <link rel="stylesheet" href="css/game.css">
+    </head>
+    <body>
+        <div id="game">
+            
+        </div>
+        <div id="overlay">
+            <div class="modal">
+                <h1>Probabilistic Tic Tac Toe</h1>
+                <p>
+                    Same rules as tic-tac-toe, but each square has a certain probability 
+                    of placing your mark (<img src="svg/success.svg">), your opponent's
+                    mark (<img src="svg/failure.svg">), or no mark at all (<img src="svg/neutral.svg">).
+                </p>
+                <div class="config">
+                    <div class="player">
+                        <select id="p1" name="p1">
+                            <option value="human" selected>Human</option>
+                            <option value="easy">AI (easy)</option>
+                            <option value="medium">AI (medium)</option>
+                            <option value="hard">AI (hard)</option>
+                            <option value="master">AI (grandmaster)</option>
+                        </select>
+                    </div><div class="vs">
+                        vs
+                    </div><div class="player">
+                        <select id="p2" name="p2">
+                            <option value="human">Human</option>
+                            <option value="easy">AI (easy)</option>
+                            <option value="medium" selected>AI (medium)</option>
+                            <option value="hard">AI (hard)</option>
+                            <option value="master">AI (grandmaster)</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="start" class="start">
+                    start playing
+                </button>
+            </div>
+        </div>
+
+        <script src="js/require.js"></script>
+        <script src="js/game.js"></script>
+        <script>require(['game'], function(init) {
+            const game = new init.Game();
+        });</script>
+    </body>
+</html>
