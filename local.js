@@ -5,7 +5,7 @@ const exec = require('child_process').execSync
 const app = express()
 const port = 8080
 
-app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'docs')))
 
 app.listen(port, () => {
     exec('open http://localhost:' + port)
